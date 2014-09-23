@@ -1,0 +1,7 @@
+javaz.baon.beans
+javaz.baon.consts
+javaz.baon.enums
+javaz.baon.manager.http
+javaz.baon.manager.http.xml
+javaz.baon.parser.http
+javaz.baon.protocol.http

@@ -1,0 +1,36 @@
+Testsuite: TestHttpProtocolManager
+Tests run: 1, Failures: 0, Errors: 0, Time elapsed: 0.13 sec
+------------- Standard Output ---------------
+[2014/08/21 14:31:51] /Users/Zero/workspace/Javaz.BAON/classes//default.properties load success.
+[2014/08/21 14:31:51] parse head.
+[2014/08/21 14:31:51] is LONG
+[2014/08/21 14:31:51] parse upcommon.
+[2014/08/21 14:31:51] is LONG
+[2014/08/21 14:31:51] is STRING
+[2014/08/21 14:31:51] is BYTE
+[2014/08/21 14:31:51] is BYTE
+[2014/08/21 14:31:51] parse downcommon.
+[2014/08/21 14:31:51] is BYTE
+[2014/08/21 14:31:51] is STRING
+[2014/08/21 14:31:51] is STRING
+[2014/08/21 14:31:51] is STRING
+[2014/08/21 14:31:51] is INT
+[2014/08/21 14:31:51] parse cmd 9999
+[2014/08/21 14:31:51] parse cmd 1
+[2014/08/21 14:31:51] parse cmd 2
+[2014/08/21 14:31:51] is STRING
+[2014/08/21 14:31:51] is SHORT
+[2014/08/21 14:31:51] is INT
+[2014/08/21 14:31:51] is INT
+[2014/08/21 14:31:51] is INT
+[2014/08/21 14:31:51] parse cmd 3
+[2014/08/21 14:31:51] is STRING
+[2014/08/21 14:31:51] is STRING
+[2014/08/21 14:31:51] parse cmd 4
+[2014/08/21 14:31:51] is LONG
+[2014/08/21 14:31:51] is STRING
+[2014/08/21 14:31:51] load xml protocol file /Users/Zero/workspace/Javaz.BAON/classes//protocols.xml success.
+null
+------------- ---------------- ---------------
+
+Testcase: testParseXml took 0.128 sec

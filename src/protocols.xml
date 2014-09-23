@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<protocols> 
+  <head name="头协议" desc="所有协议都包含">
+  	<field desc="时间戳" name="htime" type="LONG"/>  
+  </head>
+  <upcommon name="上行公共部分" desc="所有上行都包含"> 
+    <field desc="玩家uid" name="ucuid" type="LONG"/>  
+    <field desc="玩家sid" name="ucsid" type="STRING"/>  
+    <field desc="是否重连标识" name="ucrec" type="BYTE"/>  
+    <field desc="手机平台信息" name="ucpt" type="BYTE"/> 
+  </upcommon>  
+  <downcommon name="下行公共部分" desc="所有下行都包含"> 
+    <field desc="操作结果状态码" name="dcstate" type="BYTE"/>  
+    <field desc="操作状态描述" name="dcmsg" type="STRING"/>  
+    <field desc="通用获得物品串" name="dcgain" type="STRING"/>  
+    <field desc="通用属性值变化" name="dcprop" type="STRING"/>  
+    <field desc="通用刷新位标记" name="dcref" type="INT"/> 
+  </downcommon>
+  <sets>
+  	<protocol id="9999" name="默认下行" desc="默认下行" isdown="true"></protocol>
+	<protocol id="1" name="首页" desc="首页上行数据" isdown="false"/>  
+	<protocol id="2" name="首页" desc="首页下行数据" isdown="true"> 
+	  <field desc="玩家昵称" name="name" type="STRING"/>  
+	  <field desc="玩家等级" name="level" type="SHORT"/>  
+	  <field desc="玩家经验" name="exp" type="INT"/>  
+	  <field desc="玩家游戏币" name="m1" type="INT"/>  
+	  <field desc="玩家钻石" name="m2" type="INT"/> 
+	  <field desc="循环开始" name="equipList" type="LOOPSTART"/>
+	  <field desc="装备唯一id" name="id" type="INT"/>
+	  <field desc="装备设定id" name="sid" type="SHORT"/>
+	  <field desc="循环结束" name="" type="LOOPEND"/>
+	</protocol>  
+	<protocol id="3" name="登录" desc="登录上行数据" isdown="false"> 
+	  <field desc="用户的openid" name="openid" type="STRING"/>  
+	  <field desc="用户的openkey" name="openkey" type="STRING"/> 
+	</protocol>  
+	<protocol id="4" name="登录" desc="登录下行数据" isdown="true"> 
+	  <field desc="下行玩家uid" name="uid" type="LONG"/>  
+	  <field desc="下行玩家sid" name="sid" type="STRING"/> 
+	</protocol> 
+  </sets>
+</protocols>
