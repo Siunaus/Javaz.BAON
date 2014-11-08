@@ -8,6 +8,8 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 
 import javaz.baon.enums.DataTypes;
+import javaz.utils.CommUtil;
+import javaz.utils.string.StringUtil;
 
 /**
  * @author Zero
@@ -46,11 +48,13 @@ public class BAONShort extends BAONSingleField<Short> {
 	 */
 	public void content2Bytes(DataOutputStream dos) throws IOException {
 		dos.writeShort(_value);
+		CommUtil.logInfo(logger, StringUtil.format("writeShort[{0}]:{1}", fieldName, _value));
 	}
 	/* (non-Javadoc)
 	 * @see javaz.baon.beans.BAONIFiled#bytes2Content(java.io.DataInputStream)
 	 */
 	public void bytes2Content(DataInputStream dis) throws IOException {
 		_value=dis.readShort();
+		CommUtil.logInfo(logger, StringUtil.format("readShort[{0}]:{1}", fieldName, _value));
 	}
 }

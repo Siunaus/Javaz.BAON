@@ -8,6 +8,8 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 
 import javaz.baon.enums.DataTypes;
+import javaz.utils.CommUtil;
+import javaz.utils.string.StringUtil;
 
 /**
  * @author Zero
@@ -50,11 +52,13 @@ public class BAONString extends BAONSingleField<String> {
 	 */
 	public void content2Bytes(DataOutputStream dos) throws IOException {
 		dos.writeUTF(_value);
+		CommUtil.logInfo(logger, StringUtil.format("writeUTF[{0}]:{1}", fieldName, _value));
 	}
 	/* (non-Javadoc)
 	 * @see javaz.baon.beans.BAONIFiled#bytes2Content(java.io.DataInputStream)
 	 */
 	public void bytes2Content(DataInputStream dis) throws IOException {
 		_value=dis.readUTF();
+		CommUtil.logInfo(logger, StringUtil.format("readUTF[{0}]:{1}", fieldName, _value));
 	}
 }
