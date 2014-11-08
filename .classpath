@@ -6,6 +6,6 @@
 	<classpathentry kind="lib" path="lib/dom4j-1.6.1.jar" sourcepath="/Users/Zero/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1-sources.jar"/>
 	<classpathentry kind="lib" path="lib/junit.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.8.jar"/>
-	<classpathentry kind="lib" path="lib/Javaz-Utils-0.0.3.jar"/>
+	<classpathentry kind="lib" path="/Users/Zero/Documents/Javaz.BAON/lib/Javaz-Utils-0.0.3.jar" sourcepath="/Javaz.Utils"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

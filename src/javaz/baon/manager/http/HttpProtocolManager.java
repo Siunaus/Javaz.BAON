@@ -352,6 +352,6 @@ public class HttpProtocolManager {
 	 * @return
 	 */
 	public HttpProtocol getHttpProtocol(short cmdId){
-		return allHttpProtocol.get(cmdId);
+		return allHttpProtocol.get(cmdId).cloneHttpProtocol();
 	}
 }

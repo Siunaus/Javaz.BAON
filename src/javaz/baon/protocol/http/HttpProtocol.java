@@ -552,4 +552,11 @@ public class HttpProtocol{
 	public List<Map<String, BAONIFiled>> getBodyListValue(String key){
 		return ((BAONIArray)getValue(HttpDataTypes.BODY, key)).getContent();
 	}
+	public HttpProtocol cloneHttpProtocol(){
+		HttpProtocol clone=new HttpProtocol(cmdId);
+		clone.head=this.head.cloneProtocol();
+		clone.comm=this.comm.cloneProtocol();
+		clone.body=this.body.cloneProtocol();
+		return clone;
+	}
 }
