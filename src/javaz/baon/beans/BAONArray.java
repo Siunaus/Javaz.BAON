@@ -87,6 +87,7 @@ public class BAONArray extends BAONField<List<BAONIFiled>> implements BAONIArray
 	@Override
 	public void content2Bytes(DataOutputStream dos) throws IOException {
 		dos.writeShort(_content.size());
+		CommUtil.logInfo(logger, StringUtil.format("writeArray[{0}]:{1}", fieldName, _content.size()));
 		if(CommUtil.isEmpityList(_value)){
 			logger.warn(StringUtil.format("{0} field has no sub fields.", getFieldName()));
 		}else{
@@ -108,6 +109,7 @@ public class BAONArray extends BAONField<List<BAONIFiled>> implements BAONIArray
 	@Override
 	public void bytes2Content(DataInputStream dis) throws IOException {
 		short length=dis.readShort();
+		CommUtil.logInfo(logger, StringUtil.format("readArray[{0}]:{1}", fieldName, length));
 		for(int i=0;i<length;i++){
 			Map<String, BAONIFiled> map = new HashMap<String, BAONIFiled>();
 			for(int j=0,k=_value.size();j<k;j++){
