@@ -31,8 +31,11 @@
 	  <field desc="装备设定id" name="sid" type="SHORT"/>
 	  <field desc="技能IDs循环开始" name="skills" type="LOOPSTART"/>
 	  	<field desc="技能ID" name="skillId" type="INT"></field>
+	  	<field desc="技能等级" name="skilllv" type="BYTE"/>
 	  <field desc="技能IDs循环结束" name="skillIdsEnds" type="LOOPEND"/>
+	  <field desc="测试" name="pp" type="BYTE"/>
 	  <field desc="循环结束" name="" type="LOOPEND"/>
+	  <field desc="测试" name="qq" type="BYTE"/>
 	</protocol>  
 	<protocol id="3" name="登录" desc="登录上行数据" isdown="false"> 
 	  <field desc="用户的openid" name="openid" type="STRING"/>  
