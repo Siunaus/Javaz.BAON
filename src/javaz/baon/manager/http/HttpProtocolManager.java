@@ -309,7 +309,11 @@ public class HttpProtocolManager {
 				logger.debug("end a loop");
 				ParseSence sence=stack.pop();
 				isInLoop=sence.isInLoop;
-				protocol.addField((BAONIFiled)sence.array);
+				if(isInLoop){
+					stack.peek().array.addField((BAONIFiled)sence.array);
+				}else{
+					protocol.addField((BAONIFiled)sence.array);
+				}
 				continue;
 			}else if(type==DataTypes.END){
 				logger.error("never goes here.");

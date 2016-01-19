@@ -29,6 +29,9 @@
 	  <field desc="循环开始" name="equipList" type="LOOPSTART"/>
 	  <field desc="装备唯一id" name="id" type="INT"/>
 	  <field desc="装备设定id" name="sid" type="SHORT"/>
+	  <field desc="技能IDs循环开始" name="skills" type="LOOPSTART"/>
+	  	<field desc="技能ID" name="skillId" type="INT"></field>
+	  <field desc="技能IDs循环结束" name="skillIdsEnds" type="LOOPEND"/>
 	  <field desc="循环结束" name="" type="LOOPEND"/>
 	</protocol>  
 	<protocol id="3" name="登录" desc="登录上行数据" isdown="false"> 

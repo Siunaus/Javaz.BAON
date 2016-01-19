@@ -95,6 +95,9 @@ public class BAONArray extends BAONField<List<BAONIFiled>> implements BAONIArray
 				for(BAONIFiled field:_value){
 					BAONIFiled temp=(BAONIFiled)map.get(field.getFieldName());
 					if(temp!=null){
+						if(temp instanceof BAONIArray){
+							temp.setValue(field.getValue());
+						}
 						temp.content2Bytes(dos);
 					}else{
 						logger.error(StringUtil.format("field {0} has no value.", field.getFieldName()));
