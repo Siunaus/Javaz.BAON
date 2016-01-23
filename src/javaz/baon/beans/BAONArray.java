@@ -119,6 +119,9 @@ public class BAONArray extends BAONField<List<BAONIFiled>> implements BAONIArray
 				BAONIFiled field=null;
 				try {
 					field=_value.get(j).getClass().newInstance();
+					if(field instanceof BAONIArray){
+						field.setValue(_value.get(j).getValue());
+					}
 				} catch (Exception e) {
 					logger.error(StringUtil.format("class {0} has no default construct.", _value.get(i).getClass().getName()), e);
 				}
